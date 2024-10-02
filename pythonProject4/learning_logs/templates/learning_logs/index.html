@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Мой первый проект</title>
+</head>
+<body>
+
+{% extends "learning_logs/base.html" %}
+
+{% block page_header %}
+
+    <div class="jumbotron">
+        <h1 class="display-3">Следите за своим обучением.</h1>
+
+        <p class="lead">Заведите свой собственный журнал обучения и ведите список тем, которые вы изучаете.
+ Всякий раз, когда вы узнаете что-то новое по теме, делайте запись, обобщающую то, что вы узнали.
+        </p>
+
+
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}" role="button">Зарегистрироваться &raquo;</a>
+
+        <a class="btn btn-lg btn-primary" href="{% url 'users:login' %}" style="float:right;margin:0;" role="button">Войти &raquo;</a>
+
+    </div>
+
+{% endblock page_header %}
+
+</body>
+</html>
